@@ -27,78 +27,80 @@ $clima = $openWheater->getClima();
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Clima de Brusque <span class="sr-only">(current)</span></a>
-                    </li>                 
-                </ul>
-            </div>
+            <div class="d-flex justify-content-center">
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Clima de Brusque <span class="sr-only">(current)</span></a>
+                        </li>                 
+                    </ul>
+                </div>
         </nav>
         <!-- Tabelinha do Clima -->
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Tabela Climatica</h1>
-            <p class="lead">Uma tabela com varias informações sobre o clima da sua cidade.</p>
+        <div class="d-flex justify-content-center">
 
-            <div class="row featurette">
-                <div class="col-md-2">       
-                    
-                    <h3 class="featurette-heading" >Tempo em <?php echo $clima->cidade ?> </h3>                     
-                    <h4 class="weather-widget__temperature">
-                        <img class="weather-widget__img" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Brusque , BR" width="50" height="50"><?php echo $clima->getTemperaturaCelsius() ?> ºC</h4> 
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Tabela Climatica</h1>
+                <p class="lead">Uma tabela com varias informações sobre o clima da sua cidade.</p>
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <h3 class="featurette-heading" >Tempo em <?php echo $clima->cidade ?> </h3>                     
+                        <h4 class="weather-widget__temperature">
+                            <img class="weather-widget__img" src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Brusque , BR" width="50" height="50"><?php echo $clima->getTemperaturaCelsius() ?> ºC</h4> 
+                    </div>
                 </div>
+
+
+                <div class="d-flex justify-content-center">
+                <table border="5" bgcolor="lightskyblue">
+                    <tr>
+                        <th><?php echo "Codigo"; ?></th>
+                        <td><?php echo $clima->codCidade; ?></td>
+                    </tr>
+                    <tr>
+                        <th> <?php echo "Cidade"; ?></th>
+                        <td><?php echo $clima->cidade; ?></td>
+                    </tr>
+                    <tr>
+                        <th> <?php echo "Temperatura em ºC"; ?></th>
+                        <td><?php echo $clima->getTemperaturaCelsius(); ?></td>
+                    </tr>
+                    <tr>  
+                        <th> <?php echo "Temperatura em ºF"; ?></th>
+                        <td><?php echo $clima->getTemperaturaFahrenheit(); ?></td>
+                    </tr>
+                    <tr>
+                        <th> <?php echo "Temperatura em ºK"; ?></th>
+                        <td><?php echo $clima->temperatura; ?></td>
+                    </tr>
+                    <tr>
+                        <th> <?php echo "Nascer do sol"; ?></th>
+                        <td><?php echo $clima->getNascerdoSol(); ?></td>
+                    </tr>
+                    <tr>
+                        <th> <?php echo "Por do Sol"; ?></th>
+                        <td><?php echo $clima->getPordoSol(); ?></td>
+                    </tr>
+                    <tr> 
+                        <th><?php echo "Velocidade do Vento" ?>  </th>
+                        <td><?php echo $clima->velocidadeVento; ?> m/s</td>
+                    </tr>
+                    <tr> 
+                        <th><?php echo "Humidade" ?>  </th>
+                        <td><?php echo $clima->humidade; ?> %</td>
+                    </tr>
+                    <tr> 
+                        <th><?php echo "Pressão do Ar" ?>  </th>
+                        <td><?php echo $clima->pressao; ?> hpa</td>
+                    <tr>
+                        <th><?php echo "Descrição" ?>  </th>
+                        <td><?php echo $clima->descricao; ?> </td>
+                    </tr>
+                </table>
             </div>
-
-
-
-            <table border="5" bgcolor="lightskyblue">
-                <tr>
-                    <th><?php echo "Codigo"; ?></th>
-                    <td><?php echo $clima->codCidade; ?></td>
-                </tr>
-                <tr>
-                    <th> <?php echo "Cidade"; ?></th>
-                    <td><?php echo $clima->cidade; ?></td>
-                </tr>
-                <tr>
-                    <th> <?php echo "Temperatura em ºC"; ?></th>
-                    <td><?php echo $clima->getTemperaturaCelsius(); ?></td>
-
-                </tr>
-                <tr>  
-                    <th> <?php echo "Temperatura em ºF"; ?></th>
-                    <td><?php echo $clima->getTemperaturaFahrenheit(); ?></td>
-                </tr>
-                <tr>
-                    <th> <?php echo "Temperatura em ºK"; ?></th>
-                    <td><?php echo $clima->temperatura; ?></td>
-                </tr>
-                <tr>
-                    <th> <?php echo "Nascer do sol"; ?></th>
-                    <td><?php echo $clima->getNascerdoSol(); ?></td>
-                </tr>
-                <tr>
-                    <th> <?php echo "Por do Sol"; ?></th>
-                    <td><?php echo $clima->getPordoSol(); ?></td>
-                </tr>
-                <tr> 
-                    <th><?php echo "Velocidade do Vento" ?>  </th>
-                    <td><?php echo $clima->velocidadeVento; ?> m/s</td>
-                </tr>
-                <tr> 
-                    <th><?php echo "Humidade" ?>  </th>
-                    <td><?php echo $clima->humidade; ?> %</td>
-                </tr>
-                <tr> 
-                    <th><?php echo "Pressão do Ar" ?>  </th>
-                    <td><?php echo $clima->pressao; ?> hpa</td>
-                <tr>
-                    <th><?php echo "Descrição" ?>  </th>
-                    <td><?php echo $clima->descricao; ?> </td>
-                </tr>
-            </table>
         </div>
+</div>
+
         <!-- Fim da tabela -->            
 
         <br><br><br><br><br><br><br><br><br><br><br><br>
