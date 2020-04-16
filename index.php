@@ -54,47 +54,51 @@ $clima = $openWheater->getClima();
                 <div class="d-flex justify-content-center">
                 <table border="5" bgcolor="lightskyblue">
                     <tr>
-                        <th><?php echo "Codigo"; ?></th>
+                        <th>Codigo</th>
                         <td><?php echo $clima->codCidade; ?></td>
                     </tr>
                     <tr>
-                        <th> <?php echo "Cidade"; ?></th>
+                        <th>Cidade</th>
                         <td><?php echo $clima->cidade; ?></td>
                     </tr>
                     <tr>
-                        <th> <?php echo "Temperatura em ºC"; ?></th>
+                        <th>Temperatura em ºC</th>
                         <td><?php echo $clima->getTemperaturaCelsius(); ?></td>
                     </tr>
                     <tr>  
-                        <th> <?php echo "Temperatura em ºF"; ?></th>
+                        <th>Temperatura em ºF</th>
                         <td><?php echo $clima->getTemperaturaFahrenheit(); ?></td>
                     </tr>
                     <tr>
-                        <th> <?php echo "Temperatura em ºK"; ?></th>
+                        <th>Temperatura em ºK</th>
                         <td><?php echo $clima->temperatura; ?></td>
                     </tr>
                     <tr>
-                        <th> <?php echo "Nascer do sol"; ?></th>
+                        <th>Nascer do sol</th>
                         <td><?php echo $clima->getNascerdoSol(); ?></td>
                     </tr>
                     <tr>
-                        <th> <?php echo "Por do Sol"; ?></th>
+                        <th> Por do Sol</th>
                         <td><?php echo $clima->getPordoSol(); ?></td>
                     </tr>
                     <tr> 
-                        <th><?php echo "Velocidade do Vento" ?>  </th>
+                        <th>Velocidade do Vento</th>
                         <td><?php echo $clima->velocidadeVento; ?> m/s</td>
                     </tr>
                     <tr> 
-                        <th><?php echo "Humidade" ?>  </th>
+                        <th>Humidade</th>
                         <td><?php echo $clima->humidade; ?> %</td>
                     </tr>
                     <tr> 
-                        <th><?php echo "Pressão do Ar" ?>  </th>
+                        <th>Pressão do Ar</th>
                         <td><?php echo $clima->pressao; ?> hpa</td>
                     <tr>
-                        <th><?php echo "Descrição" ?>  </th>
+                        <th>Descrição</th>
                         <td><?php echo $clima->descricao; ?> </td>
+                    </tr>
+                    <tr>
+                        <th>Acessos</th>
+                        <td><?php echo $clima->acesso; ?> </td>
                     </tr>
                 </table>
             </div>

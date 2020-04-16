@@ -18,18 +18,20 @@ class Clima {
 
     //Converte de kelvin para celsius
     public function getTemperaturaCelsius() : float {
-        return $this->temperatura - 273;
+     
+    // C = K -273.15
+     $celcius = $this->temperatura - 273.15;      
+     return $celcius;
+   
     }
     
     //Convete de kelvin para fahrenheit
     public function getTemperaturaFahrenheit() : float {
-        return (($this->temperatura * 1.8) - 459.67);
-    }
-    public function getPordoSol() {
-       return date('d/m/Y H:i', $this->porDoSol);
-    }
-    public function getNascerdoSol(){
-         return date('H:i', $this->nascerDoSol);
+        
+          // F = K x 1.8 -459.67
+        $fahrenheit = ($this->temperatura * 1.8) - 459.67;       
+        return $fahrenheit;
+
     }
 
 }
